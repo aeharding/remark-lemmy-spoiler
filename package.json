@@ -1,29 +1,21 @@
 {
-  "name": "remark-directive",
-  "version": "3.0.0",
-  "description": "remark plugin to support directives",
-  "license": "MIT",
+  "name": "remark-lemmy-spoiler",
+  "version": "1.0.0",
+  "description": "remark plugin to support lemmy spoilers",
+  "license": "AGPL-3.0-only",
   "keywords": [
     "container",
-    "directive",
-    "generic",
     "markdown",
     "mdast",
     "plugin",
     "remark",
     "remark-plugin",
-    "unified"
+    "unified",
+    "lemmy",
+    "spoiler"
   ],
-  "repository": "remarkjs/remark-directive",
-  "bugs": "https://github.com/remarkjs/remark-directive/issues",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
-  },
-  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-  "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
-  ],
+  "repository": "remarkjs/remark-lemmy-spoiler",
+  "bugs": "https://github.com/aeharding/remark-lemmy-spoiler/issues",
   "sideEffects": false,
   "type": "module",
   "exports": "./index.js",
@@ -34,8 +26,8 @@
   ],
   "dependencies": {
     "@types/mdast": "^4.0.0",
-    "mdast-util-directive": "^3.0.0",
-    "micromark-extension-directive": "^3.0.0",
+    "mdast-util-lemmy-spoiler": "^1.0.0",
+    "micromark-extension-lemmy-spoiler": "^1.0.0",
     "unified": "^11.0.0"
   },
   "devDependencies": {

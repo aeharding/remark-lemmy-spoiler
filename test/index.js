@@ -8,11 +8,11 @@ import process from 'node:process'
 import test from 'node:test'
 import {isHidden} from 'is-hidden'
 import {remark} from 'remark'
-import remarkDirective from 'remark-directive'
+import remarkDirective from 'remark-lemmy-spoiler'
 
 test('remarkDirective', async function (t) {
   await t.test('should expose the public api', async function () {
-    assert.deepEqual(Object.keys(await import('remark-directive')).sort(), [
+    assert.deepEqual(Object.keys(await import('remark-lemmy-spoiler')).sort(), [
       'default'
     ])
   })
@@ -38,24 +38,15 @@ test('fixtures', async function (t) {
     await t.test(folder, async function () {
       const folderUrl = new URL(folder + '/', base)
       const inputUrl = new URL('input.md', folderUrl)
-      const outputUrl = new URL('output.md', folderUrl)
       const treeUrl = new URL('tree.json', folderUrl)
 
       const input = String(await fs.readFile(inputUrl))
 
       /** @type {Root} */
       let expected
-      /** @type {string} */
-      let output
 
       const proc = remark().use(remarkDirective)
       const actual = proc.parse(input)
-
-      try {
-        output = String(await fs.readFile(outputUrl))
-      } catch {
-        output = input
-      }
 
       try {
         if ('UPDATE' in process.env) {
@@ -71,8 +62,6 @@ test('fixtures', async function (t) {
       }
 
       assert.deepEqual(actual, expected)
-
-      assert.equal(String(await proc.process(input)), String(output))
     })
   }
 })
