@@ -8,13 +8,14 @@ import process from 'node:process'
 import test from 'node:test'
 import {isHidden} from 'is-hidden'
 import {remark} from 'remark'
-import remarkDirective from 'remark-lemmy-spoiler'
+import remarkDirective from '@aeharding/remark-lemmy-spoiler'
 
 test('remarkDirective', async function (t) {
   await t.test('should expose the public api', async function () {
-    assert.deepEqual(Object.keys(await import('remark-lemmy-spoiler')).sort(), [
-      'default'
-    ])
+    assert.deepEqual(
+      Object.keys(await import('@aeharding/remark-lemmy-spoiler')).sort(),
+      ['default']
+    )
   })
 
   await t.test('should not throw if not passed options', async function () {

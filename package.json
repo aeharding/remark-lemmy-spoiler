@@ -14,7 +14,7 @@
     "lemmy",
     "spoiler"
   ],
-  "repository": "remarkjs/remark-lemmy-spoiler",
+  "repository": "aeharding/remark-lemmy-spoiler",
   "bugs": "https://github.com/aeharding/remark-lemmy-spoiler/issues",
   "sideEffects": false,
   "type": "module",
