@@ -9,6 +9,7 @@ import test from 'node:test'
 import {isHidden} from 'is-hidden'
 import {remark} from 'remark'
 import remarkDirective from '@aeharding/remark-lemmy-spoiler'
+import {unified} from 'unified'
 
 test('remarkDirective', async function (t) {
   await t.test('should expose the public api', async function () {
@@ -43,11 +44,15 @@ test('fixtures', async function (t) {
 
       const input = String(await fs.readFile(inputUrl))
 
-      /** @type {Root} */
+      /** @type {import('mdast').Node} */
       let expected
 
       const proc = remark().use(remarkDirective)
-      const actual = proc.parse(input)
+      const remarkTree = proc.parse(input)
+
+      // Not sure why there is a typescript error here
+      // @ts-expect-error
+      const actual = unified().use(remarkDirective).runSync(remarkTree)
 
       try {
         if ('UPDATE' in process.env) {
