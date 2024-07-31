@@ -26,8 +26,8 @@
   ],
   "dependencies": {
     "@types/mdast": "^4.0.0",
-    "mdast-util-lemmy-spoiler": "^1.0.0",
-    "micromark-extension-lemmy-spoiler": "^1.0.0",
+    "mdast-util-lemmy-spoiler": "^2.0.0",
+    "micromark-extension-lemmy-spoiler": "^2.0.0",
     "remark-unlink": "^5.0.0",
     "unified": "^11.0.0"
   },
