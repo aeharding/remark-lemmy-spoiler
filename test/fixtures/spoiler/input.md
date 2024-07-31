@@ -1,4 +1,4 @@
-::: spoiler Common Dreams Media Bias Fact Check Credibility: [**High**] (Click to view Full Report)
+::: spoiler Common Dreams Media Bias Fact Check [Credibility](https://google.com): [**High**] (Click to view Full Report)
 
 ### [Common Dreams](https://mediabiasfactcheck.com/common-dreams/) is rated with High Creditability by Media Bias Fact Check.
 
