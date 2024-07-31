@@ -50,8 +50,6 @@ test('fixtures', async function (t) {
       const proc = remark().use(remarkDirective)
       const remarkTree = proc.parse(input)
 
-      // Not sure why there is a typescript error here
-      // @ts-expect-error
       const actual = unified().use(remarkDirective).runSync(remarkTree)
 
       try {
