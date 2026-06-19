@@ -16,6 +16,7 @@
   ],
   "repository": "aeharding/remark-lemmy-spoiler",
   "bugs": "https://github.com/aeharding/remark-lemmy-spoiler/issues",
+  "homepage": "https://github.com/aeharding/remark-lemmy-spoiler#readme",
   "sideEffects": false,
   "type": "module",
   "exports": "./index.js",
